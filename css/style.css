@@ -1,0 +1,101 @@
+body {
+    background: #494A5F;
+    color: #D5D6E2;
+    margin: 0px;
+    font-weight: 500;
+    font-size: 1.05em;
+    font-family: "Microsoft YaHei","宋体","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
+}
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+a{
+    color: #fff;
+}
+a:hover,a:focus{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+hr {
+    display: block;
+    width: 30rem;
+    height: 1px;
+    margin: 2.5rem 0;
+    background-color: #eee;
+    border: 0;
+}
+
+
+.header,.container,.footer {
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 头部标题 */
+.header{
+    background: #f00;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.header h2{
+    margin: 0;
+    padding: 0.8rem 0;
+}
+/* 内容区域 */
+.aplayer .aplayer-info .aplayer-music .aplayer-author{
+    color: #fff;
+}
+.videoList{
+    margin: 0;
+    padding: 1rem;
+    list-style: none;
+}
+.videoList li{
+    width: calc(50% - 0.5rem);
+    float: left;
+    padding: 0.2rem;
+    border-radius: 2px;
+    background: #ff0;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+.videoList li:nth-child(2n-1){
+    margin-left: 0rem;
+}
+.videoList li .b-video{
+    position: relative;
+}
+.videoList li .icon{
+    position: absolute;
+    width: 40%;
+    margin: 1.5rem 30%;
+}
+.videoList li p{
+    text-align: center;
+    margin: 0.3rem 0rem;
+    font-size: 0.9em;
+}
+/* 尾部导航 */
+.footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.footer .item:first-child{
+    border-right: 1px solid #f0f;
+}
+.footer .item{
+    background: #f00;
+    float: left;
+    text-align: center;
+    width: 50%;
+    padding: 0.5rem 0rem;
+}
