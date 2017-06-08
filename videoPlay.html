@@ -12,6 +12,18 @@
 	<!--[if lte IE 8]> 
 	<script src="libs/video/js/videojs-ie8.min.js"></script>
 	<![endif]-->
+	<style>
+		#my-video{
+			height: 220px;
+			margin-top: -0.5rem;
+		}
+		#my-video_html5_api{
+			height: auto;
+		}
+		source{
+			height: 220px;
+		}
+	</style>
 </head>
 
 <body>
@@ -19,7 +31,7 @@
 		<h2>佛门音乐</h2>
 	</div>
 	<div class="container aplay">
-		<video id="my-video" class="video-js" controls preload="auto" style="width:100%;height:180px;max-height:240px;"
+		<video id="my-video" class="video-js" controls preload="auto" style="width:100%;"
 		  poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
 			<source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
 			<source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
@@ -28,7 +40,18 @@
 			  To view this video please enable JavaScript, and consider upgrading to a web browser that
 			  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
 			</p>
-		  </video>
+		</video>
+		<div class="video-message">
+			<div class="title">视频名称</div>
+			<div class="message">视频简介</div>
+		</div>
+		<div class="advert-list">
+			<div class="advert-item"><img class="img" src="images/advert.jpg" alt=""></div>
+			<div class="advert-item"><img class="img" src="images/advert.jpg" alt=""></div>
+			<div class="advert-item"><img class="img" src="images/advert.jpg" alt=""></div>
+			<div class="advert-item"><img class="img" src="images/advert.jpg" alt=""></div>
+			<div class="advert-item"><img class="img" src="images/advert.jpg" alt=""></div>
+		</div>
 	</div>
 	<div class="footer">
 		<a href="musicList.html"><div class="item">音乐列表</div></a>
@@ -43,4 +66,12 @@
 		var myPlayer = this;
 		myPlayer.play();
 	});
+	window.onload = function(){
+		function onresize(){
+			var height = document.getElementById("my-video_html5_api").offsetHeight
+			document.getElementById("my-video").style.height = height + "px"
+		}
+		window.onresize = onresize
+		setTimeout(function(){onresize()},800)
+	}
 </script>

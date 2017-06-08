@@ -66,13 +66,13 @@ hr {
     padding-top: 3.5rem;
     position: relative;
 }
+/*  */
 .aplay{
     background: #4a4c5e;
+    overflow: auto;
 }
 
-.aplayer .aplayer-info .aplayer-music .aplayer-author{
-    color: #fff;
-}
+/* 音乐列表导航 */
 .music-nav{
     overflow: hidden;
     padding: 0em 0.5em;
@@ -91,8 +91,8 @@ hr {
     width: calc(25% - 0.6rem);
 }
 
-
-.music-list,.video-list{
+/*   */
+.advert-list,.music-list,.video-list{
     margin: 0;
     padding: 0.5rem;
     list-style: none;
@@ -100,13 +100,29 @@ hr {
     position: relative;
     margin-bottom: 2.5rem;
 }
-.music-list li{
+.video-list li,.music-list li{
     float: left;
-    color: #666;
     padding: 0.2rem;
-    margin-bottom: 1rem;
+    border-radius: 2px;
+    margin-bottom: 0.5rem;
     margin-left: 1rem;
-    width: calc(33% - 1rem);
+}
+.music-list li .music-img,.video-list li .video-img{
+    position: relative;
+}
+.advert-list .advert-item .img,.music-list li .img,.video-list li .img{
+    height: 100%;
+}
+.music-list li p,.video-list li p{
+    /*text-align: center;*/
+    margin: 0.3rem 0rem;
+    font-size: 0.9em;
+}
+
+/* 音乐列表 */
+.music-list li{
+    color: #666;
+    width: calc(33% - 0.6rem);
 }
 .music-list li:nth-child(3n-2){
     margin-left: 0rem;
@@ -133,30 +149,42 @@ hr {
     margin-left: 0.1rem;
 }
 
+/* 视频列表 */
 .video-list li{
     width: calc(50% - 0.5rem);
-    float: left;
-    padding: 0.2rem;
-    border-radius: 2px;
     background: #09253e;
-    margin-bottom: 0.5rem;
-    margin-left: 1rem;
 }
 .video-list li:nth-child(2n-1){
     margin-left: 0rem;
 }
-.music-list li .music-img,.video-list li .video-img{
-    position: relative;
+.music-list li .music-img{
+    height: 5.5rem;
+}
+.video-list li .video-img{
+    height: 8.5rem;
 }
 .video-list li .icon{
     position: absolute;
-    width: 40%;
-    margin: 1.5rem 30%;
+    width: 30%;
+    margin: 3rem 35%;
 }
-.music-list li p,.video-list li p{
-    /*text-align: center;*/
-    margin: 0.3rem 0rem;
-    font-size: 0.9em;
+/* 广告列表 */
+.advert-list .advert-item{
+    background: #2697d5;
+    margin-bottom: .5rem;
+    height: 10rem;
+}
+/* 播放视频信息 */
+.video-message{
+    padding: .5rem; 
+    border-bottom: 1px solid #163163;
+    background: rgba(30, 35, 44, .8);
+    font-size: .9em;
+}
+.video-message .message{
+    color: #ccc;
+    font-size: .8em;
+    padding-top: .3rem;
 }
 /* 尾部导航 */
 .footer{
