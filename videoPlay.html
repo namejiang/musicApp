@@ -45,7 +45,7 @@
 			<div class="title">视频名称</div>
 			<div class="message <!-- /*ellipsis*/ -->">视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简</div>
 		</div>
-		<div class="advert-list">
+		<div id="advert-list" class="advert-list" style="height:calc(100% - 5.5rem - 220px)">
 			<div class="advert-item"><img class="img" src="images/advert.jpg" alt=""></div>
 			<div class="advert-item"><img class="img" src="images/advert.jpg" alt=""></div>
 			<div class="advert-item"><img class="img" src="images/advert.jpg" alt=""></div>
@@ -70,6 +70,7 @@
 		function onresize(){
 			var height = document.getElementById("my-video_html5_api").offsetHeight
 			document.getElementById("my-video").style.height = height + "px"
+			document.getElementById("advert-list").style.height = "calc(100% - 8.5rem - "+height+"px)";
 		}
 		window.onresize = onresize
 		setTimeout(function(){onresize()},800)
