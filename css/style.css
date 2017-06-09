@@ -35,8 +35,25 @@ hr {
     background-color: #eee;
     border: 0;
 }
+/* 文本显示两行  */
+.ellipsis{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.ellipsis::after {
+    content:"...";
+    font-weight:bold;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:0 20px 1px 45px;
+    background:url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png) repeat-y;
+}
 
-
+/*  */
 .header,.container,.footer {
     max-width: 32rem;
     margin-left: auto;
@@ -88,7 +105,7 @@ hr {
     text-align: center;
     border-radius: 2px;
     background: #f7abab;
-    width: calc(25% - 0.6rem);
+    width: calc(50% - 0.6rem);
 }
 
 /*   */
